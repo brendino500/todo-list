@@ -8,9 +8,14 @@ import TodoList from './components/TodoList'
 function App() {
   const initialState = useContext(TodoContext)
   const [state, dispatch] = useReducer(todoReducer, initialState)
-  console.log('state', state)
+  console.log('current state:', state)
   return (
-    <TodoContext.Provider value={{ state, dispatch }}>
+    <TodoContext.Provider
+      value={{
+        state,
+        dispatch,
+      }}
+    >
       <div>
         <Nav />
         <AddTodo />

@@ -4,7 +4,7 @@ import Todo from '../components/Todo'
 
 export default function TodoList() {
   const { state } = useContext(TodoContext)
-  console.log(state)
+
   return (
     <div>
       {state.todos.map((todo, i) => {
