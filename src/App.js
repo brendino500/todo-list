@@ -1,7 +1,9 @@
+import ToDo from './components/ToDo'
+
 function App() {
   return (
     <div>
-      <h1>To do</h1>
+      <ToDo />
     </div>
   )
 }
