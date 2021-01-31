@@ -5,6 +5,12 @@ export default function reducer(state, action) {
         ...state,
         currentTodo: action.payload,
       }
+    case 'DELETE_TODO':
+      const deletedTodo = state.todos.filter((x) => x.id !== action.payload)
+      return {
+        ...state,
+        todos: deletedTodo,
+      }
     default:
       return state
   }

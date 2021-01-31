@@ -13,7 +13,11 @@ export default function Todo({ todo }) {
         >
           Edit
         </button>
-        <button>Delete</button>
+        <button
+          onClick={() => dispatch({ type: 'DELETE_TODO', payload: todo.id })}
+        >
+          Delete
+        </button>
       </div>
     </div>
   )
