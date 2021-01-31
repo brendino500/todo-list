@@ -1,11 +1,18 @@
-import React from 'react'
+import React, { useContext } from 'react'
+import TodoContext from '../context/context'
 
-export default function Todo({ text }) {
+export default function Todo({ todo }) {
+  const { dispatch } = useContext(TodoContext)
+
   return (
     <div>
-      <p>{text.text}</p>
+      <p>{todo.text}</p>
       <div>
-        <button>Edit</button>
+        <button
+          onClick={() => dispatch({ type: 'SET_CURRENT_TODO', payload: todo })}
+        >
+          Edit
+        </button>
         <button>Delete</button>
       </div>
     </div>

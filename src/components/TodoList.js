@@ -8,7 +8,7 @@ export default function TodoList() {
   return (
     <div>
       {state.todos.map((todo, i) => {
-        return <Todo text={todo} key={i} />
+        return <Todo todo={todo} key={i} />
       })}
     </div>
   )
