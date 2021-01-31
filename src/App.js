@@ -1,6 +1,9 @@
 import React, { useContext, useReducer } from 'react'
 import TodoContext from './context/context'
 import todoReducer from './reducers/reducer'
+import Nav from './components/Nav'
+import AddTodo from './components/AddTodo'
+import TodoList from './components/TodoList'
 
 function App() {
   const initialState = useContext(TodoContext)
@@ -8,7 +11,9 @@ function App() {
   return (
     <TodoContext.Provider value={{ state, dispatch }}>
       <div>
-        <h1>Todo</h1>
+        <Nav />
+        <AddTodo />
+        <TodoList />
       </div>
     </TodoContext.Provider>
   )
